@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadro de tarefas - Drag and Drop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="board">
+        <!-- Coluna 1: A Fazer -->
+        <div class="column" id="todo">
+            <h2>📄 A Fazer</h2>
+            <div class="card-list" ondragover="allowDrop(event)" ondrop="drop(event)">
+                <div class="card" draggable="true" ondragstart="drag(event)" id="card1">
+                    Redação do Enem
+                </div>
+            </div>
+        </div>
+
+        <!-- Coluna 2: Em Andamento -->
+        <div class="column" id="in-progress">
+            <h2>✏️ Em Andamento</h2>
+            <div class="card-list" ondragover="allowDrop(event)" ondrop="drop(event)">
+                <div class="card" draggable="true" ondragstart="drag(event)" id="card2">
+                    Estudar Física (Óptica)
+                </div>
+            </div>
+        </div>
+
+        <!-- Coluna 3: Concluído -->
+        <div class="column" id="done">
+            <h2>✅ Concluído</h2>
+            <div class="card-list" ondragover="allowDrop(event)" ondrop="drop(event)">
+                <div class="card completed" draggable="true" ondragstart="drag(event)" id="card3">
+                    Trabalho de História
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
